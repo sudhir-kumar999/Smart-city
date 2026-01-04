@@ -3,7 +3,7 @@ import axios from 'axios';
 // Create axios instance with default config
 // In Vite, use import.meta.env instead of process.env
 const api = axios.create({
-  baseURL: "https://smart-city-project-jpkb.onrender.com',
+  baseURL: "https://smart-city-project-jpkb.onrender.com",
   withCredentials: true, // Important: Include cookies in requests
   headers: {
     'Content-Type': 'application/json'
