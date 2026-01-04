@@ -184,7 +184,7 @@ const login = async (req, res) => {
     });
 
     // Reset 2FA verification status
-    user.is2FAVerified = false;
+    // user.is2FAVerified = false;
     await user.save();
 
     res.status(200).json({
@@ -245,8 +245,8 @@ const verifyOTP = async (req, res) => {
     await otpRecord.save();
 
     // Update user 2FA status
-    user.is2FAVerified = true;
-    user.is2FAEnabled = true;
+    // user.is2FAVerified = true;
+    // user.is2FAEnabled = true;
     await user.save();
 
     // Generate access token
@@ -359,7 +359,7 @@ const logout = async (req, res) => {
 
     // If user is authenticated, reset 2FA status
     if (req.user) {
-      req.user.is2FAVerified = false;
+      // req.user.is2FAVerified = false;
       await req.user.save();
     }
 
