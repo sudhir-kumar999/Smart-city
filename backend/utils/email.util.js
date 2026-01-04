@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
  * @returns {Promise}
  */
 const sendVerificationEmail = async (email, token) => {
-  const verificationUrl = `${process.env.FRONTEND_URL}/verify-email?token=${token}`;
+  const verificationUrl = `https://smart-cityf-ic5p.onrender.com/verify-email?token=${token}`;
   
   const mailOptions = {
     from: `"Smart City Management" <${process.env.EMAIL_FROM}>`,
