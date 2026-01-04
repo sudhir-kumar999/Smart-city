@@ -15,8 +15,11 @@ app.use(
     origin: [
       "https://smart-city-front-8dzh.onrender.com",
       "http://localhost:3000",
-      "http://localhost:3001"
+      "http://localhost:3001",
     ],
+    credentials: true, // ✅ THIS IS MANDATORY
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
