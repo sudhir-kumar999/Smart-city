@@ -178,8 +178,8 @@ const login = async (req, res) => {
     // Set refresh token in HTTP-only cookie
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      // secure: process.env.NODE_ENV === 'production',
+      sameSite: 'None',
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
 
@@ -261,7 +261,7 @@ const verifyOTP = async (req, res) => {
     // Set access token in HTTP-only cookie
     res.cookie('accessToken', accessToken, {
       httpOnly: true,
-      sameSite: 'strict',
+      sameSite: 'None',
       secure:true,
 
       maxAge: 15 * 60 * 1000 // 15 minutes
