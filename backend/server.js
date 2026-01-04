@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3001",
+    origin: "https://smart-city-front-8dzh.onrender.com",
     credentials: true,
   })
 );
