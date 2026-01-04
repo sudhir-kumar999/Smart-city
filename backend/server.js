@@ -12,8 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://smart-city-front-8dzh.onrender.com",
-    credentials: true,
+    origin: [
+      "https://smart-city-front-8dzh.onrender.com",
+      "http://localhost:3000",
+      "http://localhost:3001"
+    ],
   })
 );
 
