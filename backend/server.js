@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://smart-city-front-8dzh.onrender.com",
+      "https://smart-cityf-ic5p.onrender.com",
       "http://localhost:3000",
       "http://localhost:3001",
     ],
